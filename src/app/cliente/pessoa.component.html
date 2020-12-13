@@ -1,0 +1,63 @@
+<div class="container mt-5">
+
+    <form [formGroup]="formulario" (ngSubmit)="salvar()">
+
+        <div class="form-group">
+            <label for="nome">Nome</label>
+            <input id="nome" type="text" class="form-control" formControlName="nome"/>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group col-md-9">
+                <label for="cpf">CPF</label>
+                <p-inputMask styleClass="form-control" id="cpf" placeholder="000.000.000-00"
+                formControlName="cpf" mask="999.999.999-99" required></p-inputMask>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input type="date" class="form-control" id="dataNascimento" formControlName="dataNascimento">
+            </div>
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-6">
+                <label for="email">E-mail</label>
+                <input type="email" class="form-control" id="email" formControlName="email"/>
+            </div>
+
+            <div class="form-group col-md-3">
+                <label for="telefone">Telefone</label>
+                <p-inputMask styleClass="form-control" id="telefone" placeholder="(00) 00000-0000"
+                    formControlName="telefone" mask="(99) 99999-9999"></p-inputMask>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="skype">Skype</label>
+                <p-inputMask styleClass="form-control" id="skype" placeholder="(00) 00000-0000"
+                    formControlName="skype" mask="(99) 99999-9999"></p-inputMask>
+            </div>            
+        </div>
+
+        <div class="form-row">
+
+            <div class="form-group col-md-5">
+                <label for="estado">Estado</label>
+                <input id="estado" type="text" class="form-control" formControlName="estado"/>
+            </div>
+
+            <div class="form-group col-md-5">
+                <label for="cidade">Cidade</label>
+                <input id="cidade" type="text" class="form-control" formControlName="cidade"/>
+            </div>
+
+            <div class="form-group col-md-2">
+                <label for="cep">CEP</label>
+                <p-inputMask styleClass="form-control" id="cep" placeholder="00000-000"
+                formControlName="cep" mask="99999-999"></p-inputMask>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Salvar</button>
+    </form>
+</div>

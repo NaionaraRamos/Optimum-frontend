@@ -1,0 +1,23 @@
+<div class="container margem-nav mb-5">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>CEP</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cliente of clientes; let i = index">
+                <td><span>{{i + 1}}</span></td>
+                <td><span>{{cliente.nome}}</span></td>
+                <td><span>{{cliente.cpf}}</span></td>
+                <td><span>{{cliente.cep}}</span></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="/cadastro" class="btn btn-primary">Adicionar</a>
+</div>
